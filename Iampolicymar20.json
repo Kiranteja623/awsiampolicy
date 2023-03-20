@@ -1,0 +1,30 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Effect": "Allow",
+            "Action": [
+                "ec2: CreateInstance"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws: ec2": "InstanceType: t2.micro"
+                }
+            }
+
+        },
+        {
+            "Effect": "Allow",
+            "Action": [
+                "ec2: CreateInstance"
+            ],
+            "Resource": "*",
+            "Condition": {
+                "StringEquals": {
+                    "aws:RequestedRegion": "ap-south-1"
+                }
+            }
+
+        }
+    ]
+}

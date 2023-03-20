@@ -1,0 +1,22 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Allow",
+        "Action": [
+            "s3:*",
+            "rds:*",
+            "ec2:*"
+        ],
+        "Resource": "*"
+    }],
+    "Version": "2012-10-17",
+    "Statement": [{
+        "Effect": "Deny",
+        "Action": [
+            "s3:DeleteBuckets",
+            "rds:DeleteDBInstance",
+            "ec2:StopInstance"
+        ],
+        "Resource": "*"
+    }]
+}
